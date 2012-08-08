@@ -14,12 +14,12 @@ Refinery::Core.configure do |config|
   # config.base_cache_key = :refinery
 
   # Site name
-  # config.site_name = "Company Name"
+  config.site_name = "Vulture"
 
   # This activates Google Analytics tracking within your website. If this
   # config is left blank or set to UA-xxxxxx-x then no remote calls to
   # Google Analytics are made.
-  # config.google_analytics_page_code = "UA-xxxxxx-x"
+  config.google_analytics_page_code = "UA-32413083-1"
 
   # Enable/disable authenticity token on frontend
   # config.authenticity_token_on_frontend = true
@@ -47,5 +47,5 @@ Refinery::Core.configure do |config|
   # config.register_javascript "prototype-rails"
 
   # Register extra stylesheet for backend (optional options)
-  # config.register_stylesheet "custom", :media => 'screen'
+  config.register_stylesheet "backend-overide", :media => 'screen'
 end
