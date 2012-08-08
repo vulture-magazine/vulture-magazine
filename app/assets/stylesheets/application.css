@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+
+ #index{
+ 	background-color: #ffffff;
+ }
