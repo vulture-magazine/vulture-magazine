@@ -48,4 +48,10 @@ Refinery::Core.configure do |config|
 
   # Register extra stylesheet for backend (optional options)
   config.register_stylesheet "backend-overide", :media => 'screen'
+
+  # config.s3_backend = true
+  config.s3_bucket_name = 'vulture_web.assets'
+  config.s3_access_key_id = 'AKIAIVWRVY4GUS32OVEA'
+  config.s3_secret_access_key = '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'
+  config.s3_region = 'SINGAPORE'
 end
