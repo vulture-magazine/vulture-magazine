@@ -3,7 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.7'
 gem 'zurb-foundation', '>=3.0.0'
 
+group :development do
 gem 'eventmachine', '1.0.0.beta.4.1'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
