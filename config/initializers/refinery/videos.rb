@@ -10,11 +10,11 @@ Refinery::Videos.configure do |config|
 
     # Configure Dragonfly
     # This is where in the middleware stack to insert the Dragonfly middleware
-    # config.dragonfly_insert_before = ActionDispatch::Callbacks
-    # config.dragonfly_secret = 59d60f58ca6df3c982d53822e05d98d0a5c5a69e3013e49f
+    config.dragonfly_insert_before = ActionDispatch::Callbacks
+    config.dragonfly_secret = "59d60f58ca6df3c982d53822e05d98d0a5c5a69e3013e49f"
     # If you decide to trust file extensions replace :ext below with :format
-    # config.dragonfly_url_format = /system/videos/:job/:basename.:format
-    # config.datastore_root_path = C:/Users/vishnu/Desktop/RI/Vulture/vulture_web/public/system/refinery/videos
+    config.dragonfly_url_format = "/system/videos/:job/:basename.:ext"
+    config.datastore_root_path = "vulture.assets"
     # config.trust_file_extensions = false
 
 end
