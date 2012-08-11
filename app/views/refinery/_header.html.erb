@@ -1,4 +1,12 @@
-	<%= link_to image_tag("vulture-logo.jpg", width:"20%"), refinery.root_path, style:"padding-left:40%;"%>
+	<div class="row">
+
+	    <div class="three columns"></div>
+	    <div class="six columns">
+	        <%= link_to image_tag("vulture-logo.jpg", width:"100%"), "/home"%>
+	    </div>
+	    <div class="three columns"></div>
+
+	  </div>
 <div class="row one">
 <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
