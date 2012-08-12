@@ -1,6 +1,9 @@
 <head>
   <meta charset='<%= Rails.application.config.encoding %>' />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>  
+  <link rel="apple-touch-icon" href="vulture-apple.PNG"/>
+  <link rel="apple-touch-startup-image" href="vulture-apple-start.PNG">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
   <title><%= browser_title(yield(:title)) %></title>
   <%= raw %(<meta name="description" content="#{@meta.meta_description}" />) if @meta.meta_description.present? -%>
