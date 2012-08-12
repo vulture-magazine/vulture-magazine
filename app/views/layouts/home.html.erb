@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <%= render '/refinery/html_tag' %>
-  <% site_bar = render('/refinery/site_bar', :head => true) -%>
-  <%= render '/refinery/head' %>
-  <body>
-    <%= site_bar -%>
-    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
-      <header id="header">
-        <%= render '/refinery/header' -%>
-      </header>
-      <section id="page">
-        <%= yield %>
-      </section>
-      <footer>
-        <%= render '/refinery/footer' -%>
-      </footer>
-    </div>
-    <%= render '/refinery/javascripts' %>
-  </body>
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<%= render '/refinery/head' %>
+<body>
+	<%= site_bar -%>
+	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+	<div id="page_container">
+		<header id="header">
+			<%= render '/refinery/header' -%>
+		</header>
+		<section id="page">
+			<% content_for :body_content_right do %>
+					<div id="galleria">
+						<% i = 0 %>
+						<% @page.images.each_with_index do |image, index| %>					
+						<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("200x200#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
+						<% end %> 
+					</div>
+					<script>
+					    Galleria.loadTheme('assets/galleria/themes/classic/galleria.classic.min.js');
+					    Galleria.run('#galleria');
+					</script>
+			<% end %>
+			<%= render :partial => "/refinery/content_page" %>
+		</section>
+		<footer>
+			<%= render '/refinery/footer' -%>
+		</footer>
+	</div>
+	<%= render '/refinery/javascripts' %>
+</body>
 </html>
+
+
