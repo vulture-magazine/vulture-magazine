@@ -10,25 +10,54 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<% content_for :body_content_right do %>
-					<div id="galleria">
-						<% i = 0 %>
-						<% @page.images.each_with_index do |image, index| %>					
-						<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("200x200#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
-						<% end %> 
+
+			<div class="row">
+				<div class="two columns" style="width:5%;"></div>
+				<div class="eight columns" style="width:90%; margin-left: 0%;">
+					<div class="slider-wrapper theme-dark"  style="max-width:800px;max-height:520px; margin-left:auto;">
+						<div class="ribbon"></div>
+						<div id="slider" class="nivoSlider">
+							<% @page.images.each_with_index do |image, index| %>					
+							<a href="<%=image.thumbnail("800x450#c").url%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%=raw @page.caption_for_image_index(index) %>" data-thumb="<%=image.thumbnail("80x45#c").url%>"/></a>
+							<% end %> 
+						</div>
 					</div>
-					<script>
-					    Galleria.loadTheme('assets/galleria/themes/classic/galleria.classic.min.js');
-					    Galleria.run('#galleria');
-					</script>
-			<% end %>
-			<%= render :partial => "/refinery/content_page" %>
+				</div>
+				<div class="two columns" style="width:5%;"></div>
+			</div>
 		</section>
 		<footer>
 			<%= render '/refinery/footer' -%>
 		</footer>
 	</div>
 	<%= render '/refinery/javascripts' %>
+	<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider({
+	        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+	        slices: 15, // For slice animations
+	        boxCols: 8, // For box animations
+	        boxRows: 4, // For box animations
+	        animSpeed: 500, // Slide transition speed
+	        pauseTime: 3000, // How long each slide will show
+	        startSlide: 0, // Set starting Slide (0 index)
+	        directionNav: true, // Next & Prev navigation
+	        directionNavHide: true, // Only show on hover
+	        controlNav: true, // 1,2,3... navigation
+	        controlNavThumbs: true, // Use thumbnails for Control Nav
+	        pauseOnHover: true, // Stop animation while hovering
+	        manualAdvance: false, // Force manual transitions
+	        prevText: 'Prev', // Prev directionNav text
+	        nextText: 'Next', // Next directionNav text
+	        randomStart: false, // Start on a random slide
+	        beforeChange: function(){}, // Triggers before a slide transition
+	        afterChange: function(){}, // Triggers after a slide transition
+	        slideshowEnd: function(){}, // Triggers after all slides have been shown
+	        lastSlide: function(){}, // Triggers when last slide is shown
+	        afterLoad: function(){} // Triggers when slider has loaded
+	    });
+});
+</script>
 </body>
 </html>
 

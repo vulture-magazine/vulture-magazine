@@ -13,7 +13,7 @@
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
 
-  <%= stylesheet_link_tag "application", "formatting", "theme", "galleria/themes/classic/galleria.classic.css" %>
+  <%= stylesheet_link_tag "application", "formatting", "theme", "themes/dark/dark.css" %>
   <%= stylesheet_link_tag "home" if home_page? %>
   <%= yield :stylesheets %>
   <%= render '/refinery/google_analytics' %>

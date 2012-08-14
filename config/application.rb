@@ -66,7 +66,7 @@ module VultureWeb
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    config.assets.paths << "#{Rails.root}/vendor/assets/libs"
+    config.assets.paths << "#{Rails.root}/app/assets/nivo/themes/"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
