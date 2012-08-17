@@ -80,21 +80,25 @@
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
         -o-transition: opacity .25s ease-in-out;
+
  }  
 
   div.description:hover{
   	opacity:0.8;
   }
  .descriptiontext{
- 	position: absolute;
- 	top: 50%;
+    position: absolute;
+    top: 50%;
+    margin-left: auto;
+
  }
 
  p {
  	margin: 0px;
+    font-family: 'PT Serif Caption', serif;
  }
 
  .menuitem{
  	padding-left: 2%;
+    font-family: 'PT Serif Caption', serif;
  }
-

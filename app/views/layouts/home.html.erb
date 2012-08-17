@@ -11,14 +11,14 @@
 		</header>
 		<section id="page">
 
-			<div class="row">
+			<div class="row" style="height:100%;">
 				<div class="two columns" style="width:5%;"></div>
 				<div class="eight columns" style="width:90%; margin-left: 0%;">
-					<div class="slider-wrapper theme-dark"  style="max-width:800px;max-height:520px; margin-left:auto;">
+					<div class="slider-wrapper theme-light"  style="max-width:800px; margin-left:auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
 							<% @page.images.each_with_index do |image, index| %>					
-							<a href="<%=image.thumbnail("800x450#c").url%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%=raw @page.caption_for_image_index(index) %>" data-thumb="<%=image.thumbnail("80x45#c").url%>"/></a>
+							<a href="<%=image.thumbnail("800x450#c").url%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%=raw @page.caption_for_image_index(index) %>"/></a>
 							<% end %> 
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 	<script type="text/javascript">
 	$(window).load(function() {
 		$('#slider').nivoSlider({
-	        effect: 'random', // Specify sets like: 'fold,fade,sliceDown'
+	        effect: 'fade', // Specify sets like: 'fold,fade,sliceDown'
 	        slices: 15, // For slice animations
 	        boxCols: 8, // For box animations
 	        boxRows: 4, // For box animations
