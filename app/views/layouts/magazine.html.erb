@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<%= render '/refinery/head' %>
+<body>
+	<%= site_bar -%>
+	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+	<div id="page_container">
+		<header id="header">
+			<%= render '/refinery/header' -%>
+		</header>
+		<section id="page">
+			<div class="row">
+				<div class="one" style="width:0%;"></div>	
+					<% i = 0 %>
+					<% @page.images.each_with_index do |image, index| %>					
+					<div class = "two columns" style="margin-left:1%; width:19%;">
+						<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("300x600#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
+						<div class='description'>  
+						        <span class="descriptiontext" style="">
+						        	<hr style="margin:0px -6px 8px -6px;"/> 
+						        	<%=raw @page.caption_for_image_index(index)%>
+						        	<hr style="margin:-10px -6px 0px -6px;"/> 
+						        </span> 
+						</div>
+					</div>
+					<% end %> 
+				<div class="one" style="width:0%;"></div>
+			</div>
+		</section>
+		<footer>
+			<%= render '/refinery/footer' -%>
+		</footer>
+	</div>
+	<%= render '/refinery/javascripts' %>
+</body>
+</html>
+
+
