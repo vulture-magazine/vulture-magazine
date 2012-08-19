@@ -74,7 +74,7 @@
      font-size:15px;  
      color:white;  
      opacity:0.0; /* transparency */  
-     filter:alpha(opacity=60); /* IE transparency */  
+     filter:alpha(opacity=0); /* IE transparency */  
      text-align: center;
      transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
@@ -84,12 +84,20 @@
  }  
 
   div.description:hover{
-  	opacity:0.8;
+  	opacity:0.7;
   }
  .descriptiontext{
     position: absolute;
     top: 50%;
     margin-left: auto;
+    margin: 0px;
+    font-family: 'PT Serif Caption', serif;
+    color: #7c7c7c;
+
+ }
+
+ .descriptiontext:hover{
+    color: #1a1a1a;
 
  }
 

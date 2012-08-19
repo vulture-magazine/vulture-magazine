@@ -17,7 +17,7 @@
 					<div class="slider-wrapper theme-light"  style="max-width:800px; margin-left:auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
-							<% @page.images.each_with_index do |image, index| %>					
+							<% @page.descendants.images.each_with_index do |image, index| %>					
 							<a href="<%=image.thumbnail("800x450#c").url%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%=raw @page.caption_for_image_index(index) %>"/></a>
 							<% end %> 
 						</div>

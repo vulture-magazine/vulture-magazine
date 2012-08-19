@@ -15,11 +15,11 @@
 					<% i = 0 %>
 					<% @page.images.each_with_index do |image, index| %>					
 					<div class = "two columns" style="margin-left:1%; width:19%;">
-						<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("300x600#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
+						<a href="/<%=raw @page.caption_for_image_index(index).downcase.gsub!(/(<[^>]*>)|\n|\t/s) {""}%>"><img src="<%=image.thumbnail("300x600#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
 						<div class='description'>  
 						        <span class="descriptiontext" style="">
 						        	<hr style="margin:0px -6px 8px -6px;"/> 
-						        	<%=raw @page.caption_for_image_index(index)%>
+						        	<p><a href="/<%=raw @page.caption_for_image_index(index).gsub!(/(<[^>]*>)|\n|\t/s) {""}.downcase%>"><%=raw @page.caption_for_image_index(index)%></a></p>
 						        	<hr style="margin:-10px -6px 0px -6px;"/> 
 						        </span> 
 						</div>
