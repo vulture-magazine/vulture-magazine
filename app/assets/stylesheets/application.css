@@ -101,6 +101,42 @@
 
  }
 
+
+ div.postdescription{  
+     position:absolute; /* absolute position (so we can position it where we want)*/  
+     bottom:0px; /* position will be on bottom */  
+     right:0px;  
+     width:30%;
+     height:100%;  
+     /* styling bellow */  
+     background-color:black;  
+     font-family: 'tahoma';  
+     font-size:15px;  
+     color:white;  
+     opacity:0.8; /* transparency */  
+     filter:alpha(opacity=0.8); /* IE transparency */  
+     text-align: center;
+     transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+        -o-transition: opacity .25s ease-in-out;
+
+ }  
+
+ .postdescriptiontext{
+    position: absolute;
+    top: 20%;
+    margin-left: 10%;
+    font-family: 'PT Serif Caption', serif;
+    color: #7c7c7c;
+
+ }
+
+ .postdescriptiontext:hover{
+    color: #1a1a1a;
+
+ }
+
  p {
  	margin: 0px;
     font-family: 'PT Serif Caption', serif;

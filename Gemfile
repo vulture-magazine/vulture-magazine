@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.7'
-gem 'zurb-foundation', '~> 2.2.1.2'
+gem 'compass-rails', '~> 1.0.3'
+gem 'zurb-foundation', '~> 3.0.9'
 
 group :development do
 	gem 'eventmachine', '~> 1.0.0.beta.4.1'

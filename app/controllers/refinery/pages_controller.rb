@@ -65,6 +65,10 @@ module Refinery
       page.children.order('lft ASC').live.first
     end
 
+    def list_children
+      page.children.order('created_at ASC')
+    end
+
     def find_page_for_preview
       if page(fallback_to_404 = false)
         # Preview existing pages

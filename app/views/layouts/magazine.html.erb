@@ -10,23 +10,31 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<div class="row">
-				<div class="one" style="width:0%;"></div>	
-					<% i = 0 %>
-					<% @page.images.each_with_index do |image, index| %>					
-					<div class = "two columns" style="margin-left:1%; width:19%;">
-						<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("300x600#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
-						<div class='description'>  
-						        <span class="descriptiontext" style="">
-						        	<hr style="margin:0px -6px 8px -6px;"/> 
-						        	<%=raw @page.caption_for_image_index(index)%>
-						        	<hr style="margin:-10px -6px 0px -6px;"/> 
-						        </span> 
-						</div>
+
+			<% @page.children.each do |boss| %>
+			<% boss.images.each_with_index	 do |image, index| %>	
+			<div class="row" style="padding-bottom:1%;">
+				<div class = "twelve columns" style="">
+					<a href="<%=image.thumbnail("800x600#c").url%>"><img src="<%=image.thumbnail("1366x766#c").url%>" data-title="Item Title" data-description="<%=raw boss.caption_for_image_index(index) %>"></a>
+					<div class='postdescription'>  
+						<div class="row"></div>
+						<div class="two columns" style="width:2%;	"></div>
+						<div class="eight columns" style="width:96%;">
+							<div class="" style="">
+							<hr style="margin:0px -6px 8px -6px;"/> 
+							<%=raw boss.caption_for_image_index(index)%>
+							<hr style="margin:-10px -6px 0px -6px;"/> 
+						</div> 
 					</div>
-					<% end %> 
-				<div class="one" style="width:0%;"></div>
+						<div class="two columns" style="width:2%;	"></div>
+						
+					</div>
+				</div>
 			</div>
+			<% break %>	
+			<% end %>
+			<% end %> 
+
 		</section>
 		<footer>
 			<%= render '/refinery/footer' -%>
