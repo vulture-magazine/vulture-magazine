@@ -20,7 +20,7 @@ module VultureWeb
   ENV['S3_KEY']='AKIAIVWRVY4GUS32OVEA'
   ENV['S3_SECRET']='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'
   ENV['S3_BUCKET']='vulture.assets'
-  ENV['S3-REGION']= 'SINGAPORE'
+  ENV['S3-REGION']='ap-southeast-1'
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
