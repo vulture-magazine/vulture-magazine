@@ -98,9 +98,7 @@
 
  .descriptiontext:hover{
     color: #1a1a1a;
-
  }
-
 
  div.postdescription{  
      position:absolute; /* absolute position (so we can position it where we want)*/  
