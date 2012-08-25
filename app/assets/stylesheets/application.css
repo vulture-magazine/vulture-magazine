@@ -10,9 +10,8 @@
  *
  *= require_self
  *= require_tree .
+ *= require foundation
  */
-
- @import "foundation";
 
  /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
