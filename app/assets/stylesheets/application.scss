@@ -9,9 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation
  *= require_tree .
  */
+
+ @import "foundation";
 
  /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
