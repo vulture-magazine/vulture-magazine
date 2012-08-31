@@ -1,0 +1,31 @@
+body{
+	background: url("/assets/page_bg.png");
+}
+
+#site_bar{
+	background-color: rgba(255,255,255,0.3);
+}
+
+#editor_switch a {
+	color: white;
+	background: none;
+	border: none;
+	padding: 4px 14px;
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+	border-radius: 0px;
+	font-weight: bold;
+}
+
+#editor_switch a:hover {
+	color: white;
+	background: none;
+	border: none;
+	padding: 4px 14px;
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+	border-radius: 0px;
+	font-weight: bold;
+}

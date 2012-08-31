@@ -47,7 +47,7 @@ Refinery::Core.configure do |config|
   # config.register_javascript "prototype-rails"
 
   # Register extra stylesheet for backend (optional options)
-  # config.register_stylesheet "backend-overide", :media => 'screen'
+  config.register_stylesheet "backend-overide", :media => 'screen'
 
   # config.s3_backend = true
   config.s3_bucket_name = 'vulture.assets'

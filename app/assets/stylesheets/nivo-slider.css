@@ -59,12 +59,15 @@
 .nivo-caption {
 	position:absolute;
 	bottom:0px;
+	right:0px;
+	height: 100%;
 	background:#000;
 	color:#fff;
-	width:100%;
+	width:30%;
 	z-index:8;
 	padding: 5px 10px;
-	opacity: 0.8;
+	opacity: 0.6;
+	font-family: 'GFS Didot', serif; 
 	overflow: hidden;
 	display: none;
 	-moz-opacity: 0.8;
