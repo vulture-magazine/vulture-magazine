@@ -7,9 +7,11 @@
 -%>
 
 <span <%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
+<div>
 <%= link_to(menu_branch.title, refinery.url_for(menu_branch.url)) -%>
   <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
+    
     <a class='clearfix'>
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
@@ -17,6 +19,11 @@
                    :hide_children => !!hide_children,
                    :menu_levels => local_assigns[:menu_levels]
                  } -%>
+
     </a>
+
   <% end -%>
+</div>
+  <div class="arrow-up"></div>
+
 </span>
