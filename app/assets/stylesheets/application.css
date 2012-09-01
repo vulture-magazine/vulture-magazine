@@ -47,7 +47,7 @@ h2{
      height:100%;  
      /* styling bellow */  
      background-color:black;  
-     font-family: 'tahoma';  
+     font-family: 'pala', serif;  
      font-size:15px;  
      color:white;  
      opacity:0.0; /* transparency */  
@@ -57,21 +57,27 @@ h2{
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
         -o-transition: opacity .25s ease-in-out;
-
  }  
+
+ .description p{
+    width: 80%;
+    height: 10%;
+    margin: 100% auto;
+    text-align: center;
+ }
+
+.description p a{
+    border-top: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: white;
+    padding-top:4px; 
+    padding-bottom: 4px;
+}
 
   div.description:hover{
   	opacity:0.7;
   }
- .descriptiontext{
-    position: relative;
-    top: 50%;
-    left: 25%;
-    right: 75%;
-    font-family: 'pala', serif;
-    color: #7c7c7c;
-    overflow: hidden;
- }
 
  .descriptiontext:hover{
     color: #1a1a1a;
