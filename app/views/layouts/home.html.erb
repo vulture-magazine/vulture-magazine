@@ -48,7 +48,7 @@
 	        controlNav: true, // 1,2,3... navigation
 	        controlNavThumbs: true, // Use thumbnails for Control Nav
 	        pauseOnHover: true, // Stop animation while hovering
-	        manualAdvance: false, // Force manual transitions
+	        manualAdvance: true, // Force manual transitions
 	        prevText: 'Prev', // Prev directionNav text
 	        nextText: 'Next', // Next directionNav text
 	        randomStart: false, // Start on a random slide
@@ -59,6 +59,12 @@
 	        afterLoad: function(){} // Triggers when slider has loaded
 	    });
 });
+</script>
+
+<script type="text/javascript">
+	$(window).load(function() {
+	    $('#slider').nivoSlider();
+	});
 </script>
 </body>
 </html>
