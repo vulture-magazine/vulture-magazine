@@ -53,6 +53,7 @@ h2{
      opacity:0.0; /* transparency */  
      filter:alpha(opacity=0); /* IE transparency */  
      text-align: center;
+     cursor: pointer;
      transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
@@ -71,8 +72,10 @@ h2{
     border-bottom: 1px;
     border-style: solid;
     border-color: white;
-    padding-top:4px; 
-    padding-bottom: 4px;
+    padding-top:6px; 
+    padding-bottom: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
   div.description:hover{
