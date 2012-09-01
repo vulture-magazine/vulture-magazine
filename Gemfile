@@ -53,6 +53,7 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-inquiries', '~> 2.0.0'
 gem 'refinerycms-videojs'
 gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-mailchimp', :github => 'Wirelab/refinerycms-mailchimp', :branch => 'feature/2.0.0'
 
 # The Heroku gem allows you to interface with Heroku's API
 gem 'heroku'
