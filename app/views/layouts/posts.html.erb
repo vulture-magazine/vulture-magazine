@@ -10,13 +10,11 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<h1><%= page_title %></h1>
-			
-
 			<div class="row" style="height:100%;">
 				<div class="two columns" style="width:5%;"></div>
 				<div class="eight columns" style="width:90%; margin-left: 0%;">
-					<div class="slider-wrapper theme-light"  style="max-width:800px; margin-left:auto;">
+					<h1 class="small"><%= page_title %></h1>
+					<div class="slider-wrapper theme-light"  style="max-width:800px; margin-left:auto; margin-right:auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
 							<% @page.images.each_with_index do |image, index| %>					
@@ -26,8 +24,12 @@
 					</div>
 				</div>
 				<div class="two columns" style="width:5%;"></div>
-				<div class="row twelve columns">
-					<%= raw @page.content_for(:body) %>	
+				<div class="row">
+					<div class="two columns" style="width:5%;"></div>
+					<div class="twelve columns" style="width:90%;">
+						<div style="max-width:800px; margin:40px auto;"><%= raw @page.content_for(:body) %></div>	
+					</div>
+					<div class="two columns" style="width:5%;"></div>
 				</div>
 			</div>
 		</section>

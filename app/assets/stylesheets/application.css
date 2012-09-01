@@ -10,10 +10,22 @@
  *
  *= require foundation
  *= require_self
-  *= reuqire_tree ./front
  *= require_tree ./themes
-
+ *= require_tree ./front
  */
+
+h1{
+    font-family: 'GFS Didot', serif;
+    color: #2a2a2a;
+}
+
+h1.small{
+    font-variant: small-caps;
+    font-size: 22px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 h2{
