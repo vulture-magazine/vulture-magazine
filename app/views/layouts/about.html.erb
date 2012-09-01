@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
+      <section id="page">
+        <div class="row">
+          <div class="two columns" style="width:5%;"></div>
+          <div class="eight columns" style="width:90%;">
+            <img src="<%=@page.images.first.thumbnail("800x300#c").url%>" alt="Vulture">
+          </div>
+          <div class="two columns" style="width:5%;"></div>
+        </div>
+        <div class="row">
+          <div class="two columns" style="width:5%;"></div>
+          <div class="eight columns" style="width:90%;">
+            <div style="max-width:800px; margin-top:30px;"><%= raw @page.content_for(:body) %></div> 
+          </div>
+          <div class="two columns" style="width:5%;"></div>
+        </div>
+      </section>
+      <footer>
+        <%= render '/refinery/footer' -%>
+      </footer>
+    </div>
+    <%= render '/refinery/javascripts' %>
+  </body>
+</html>
