@@ -14,8 +14,14 @@
  *= require_tree ./front
  */
 
+
+@font-face {
+    font-family: pala;
+    src: url("/fonts/pala.ttf");
+}
+
 h1{
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
     color: #2a2a2a;
 }
 
@@ -30,7 +36,7 @@ h1.small{
 
 h2{
     color: #2a2a2a;
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
 }
  
  div.description{  
@@ -62,7 +68,7 @@ h2{
     top: 50%;
     margin-left: auto;
     margin: 0px;
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
     color: #7c7c7c;
     overflow: hidden;
 
@@ -101,7 +107,7 @@ h2{
     position: absolute;
     top: 20%;
     margin-left: 10%;
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
     color: #7c7c7c;
 
  }
@@ -112,7 +118,7 @@ h2{
  }
 
  p {
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
     text-align: justify;
     font-size: 14px;
     color: black;
@@ -120,7 +126,7 @@ h2{
  }
 
  .menuitem{
-    font-family: 'GFS Didot', serif;
+    font-family: 'pala', serif;
     color: #2a2a2a;
     width: 615px;  
     text-align: center;   
