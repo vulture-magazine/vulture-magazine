@@ -112,8 +112,11 @@ h2{
  }
 
  p {
- 	margin: 0px;
     font-family: 'GFS Didot', serif;
+    text-align: justify;
+    font-size: 14px;
+    color: black;
+    line-height: 17px;
  }
 
  .menuitem{
