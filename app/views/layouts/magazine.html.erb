@@ -10,34 +10,14 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-
-			<% @page.children.each do |boss| %>
-			<% boss.images.each_with_index	 do |image, index| %>	
-			<div class="row" style="padding-bottom:1%;">
-				<div class="two columns"></div>
-				<div class = "ten columns" style="">
-					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("640x400#c").url%>" data-title="Item Title" data-description="<%=raw boss.caption_for_image_index(index) %>"></a>
-					<div class='postdescription'>  
-						<div class="row"></div>
-						<div class="two columns" style="width:2%;	"></div>
-						<div class="eight columns" style="width:96%;">
-							<div class="" style="">
-							<hr style="margin:0px -6px 8px -6px;"/> 
-							<%=raw boss.caption_for_image_index(index)%>
-							<hr style="margin:-10px -6px 0px -6px;"/> 
-						</div> 
-					</div>
-						<div class="two columns" style="width:2%;	"></div>
-						
-					</div>
+			<div class="row" style="height:100%;">
+				<div class="two columns" style="width:5%;"></div>
+				<div class="eight columns" style="width:90%; margin-left: 0%;">
+					<%= raw @page.content_for(:body) %>
 				</div>
-								<div class="two columns"></div>
-
+				<div class="two columns" style="width:5%;"></div>
+				
 			</div>
-			<% break %>	
-			<% end %>
-			<% end %> 
-
 		</section>
 		<footer>
 			<%= render '/refinery/footer' -%>
