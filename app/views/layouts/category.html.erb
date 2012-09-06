@@ -17,7 +17,7 @@
 				<div class="two columns"></div>
 				<div class = "eight columns" style="width:74%; margin-left:0px;">
 					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("640x300#c").url%>" data-title="Item Title" data-description="<%=raw boss.caption_for_image_index(index) %>" style="margin:0px auto; height:auto; width:100%;"></a>
-					<div class='nivo-caption' style="">  
+					<div class='nivo-caption' style="bottom:1.5%">  
 						<h1><%=raw boss.title%></h1>
 						<%=raw boss.content_for(:body) %>
 					</div> 
@@ -25,18 +25,19 @@
 				<div class="two columns"></div>
 
 			</div>
+			<% break %>	
+			<% end %>
+			<% end %> 
 		</div>
 		<div class="two columns"></div>
 
-	</div>
-	<% break %>	
-	<% end %>
-	<% end %> 
 
-</section>
-<footer>
-	<%= render '/refinery/footer' -%>
-</footer>
+
+
+	</section>
+	<footer>
+		<%= render '/refinery/footer' -%>
+	</footer>
 </div>
 <%= render '/refinery/javascripts' %>
 </body>
