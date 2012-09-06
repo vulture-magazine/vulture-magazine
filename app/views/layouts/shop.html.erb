@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+<% site_bar = render('/refinery/site_bar', :head => true) -%>
+<%= render '/refinery/head' %>
+<body>
+	<%= site_bar -%>
+	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+	<div id="page_container">
+		<header id="header">
+			<%= render '/refinery/header' -%>
+		</header>
+		<section id="page">
+			<% colname = ['three',    'four',     'five'] %>
+			<% i = 1 %>	
+
+			<% @page.children.each do |boss| %>
+
+
+			<% boss.images.each_with_index	 do |image, index| %>
+			<% if i==1 %>
+			<div class="row" style="padding-bottom:1%;">
+			<div class = "one column end" style="width:5%; margin-left:4.4%"></div>
+			<% end %>
+				<div class = "three columns end" style="width=30%;">
+					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("400x400#c").url%>" data-title="Item Title" style="margin:0px auto; height:auto; width:100%;"></a>
+					<div class='nivo-caption' style="bottom:1.5%; left:0px; top:70%; width:100%; padding:0px;">  
+						<h1 style="padding:2px 5px 2px 5px; font-size:14px;"><%=raw boss.title%></h1>
+					</div> 
+				</div>
+			<% if i==3%>
+			<div class = "one column end" style="width:5%;"></div>
+			</div>
+			<%end%>
+			
+			<% break %>	
+			<% end %>
+			<% i+=1 %>
+			<% if i==4 %>
+			<% i=1 %>
+			<% end %>
+
+			<% end %>
+
+
+
+
+	</section>
+	<footer>
+		<%= render '/refinery/footer' -%>
+	</footer>
+</div>
+<%= render '/refinery/javascripts' %>
+</body>
+</html>
+
+
