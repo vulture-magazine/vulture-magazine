@@ -24,11 +24,28 @@
           </div>
           <div class="two columns" style="width:5%;"></div>
         </div>
+        <div class="row">
+          <div class="two columns" style="width:5%;"></div>
+          <div class="eight columns" style="width:90%;">
+              <div style="width:100px; margin:10px auto;">
+              <div class="fb ic"><a href="https://www.facebook.com/VULTUREONLINE"></a></div>
+              <div class="tw ic"><a href="https://twitter.com/VultureMag"></a></div>
+              <div class="tb ic"><a href="http://vulture-magazine.tumblr.com/"></a></div>
+            </div>
+          </div>
+          <div class="two columns" style="width:5%;"></div>
+        </div>
       </section>
       <footer>
         <%= render '/refinery/footer' -%>
       </footer>
     </div>
     <%= render '/refinery/javascripts' %>
+  <script type="text/javascript">
+  $('.ic').css( 'cursor', 'pointer' );
+  $(".ic").click(function(){
+     window.location=$(this).find("a").attr("href"); 
+     return false;
+});</script>
   </body>
 </html>
