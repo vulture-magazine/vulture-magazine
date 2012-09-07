@@ -19,7 +19,7 @@
 					<div class="slider-wrapper theme-light"  style="max-width:800px; margin:0px auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
-							<% links = ["/fashion/slenderman","/fashion/in-a-blur","/fashion/positive-dimension","/fashion/traversity","",""] %>
+							<% links = ["/fashion/steel-blue","/fashion/gaussian-motion","/fashion/positive-dimension","/fashion/new-kids-on-the-block","/fashion/sunkick","/fashion/and-the-wind-blows-your-hair"] %>
 							<% @page.images.each_with_index do |image, index| %>					
 							<a href="<%=links[index]%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%= raw (@page.caption_for_image_index(index)? @page.caption_for_image_index(index) : "") %>"/></a>
 
@@ -40,7 +40,7 @@
 		$('#slider').nivoSlider({
         effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
         animSpeed:500, // Slide transition speed
-        pauseTime:3000, // How long each slide will show
+        pauseTime:5000, // How long each slide will show
         startSlide:0, // Set starting Slide (0 index)
         directionNav:true, // Next & Prev navigation
         directionNavHide:true, // Only show on hover
@@ -50,7 +50,7 @@
         controlNavThumbsSearch: '.jpg', // Replace this with...
         controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
         keyboardNav:true, // Use left & right arrows
-        pauseOnHover:false, // Stop animation while hovering
+        pauseOnHover:true, // Stop animation while hovering
         manualAdvance:false, // Force manual transitions
         captionOpacity:0.8, // Universal caption opacity
         prevText: 'Prev', // Prev directionNav text
