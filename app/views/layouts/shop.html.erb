@@ -26,17 +26,14 @@
 						<h1 style="padding:2px 5px 2px 5px; font-size:14px;"><%=raw boss.title%></h1>
 					</div> 
 				</div>
-			<% if i==3%>
+			<% if i==3 %>
 			<div class = "one column end" style="width:5%;"></div>
 			</div>
 			<%end%>
 			
 			<% break %>	
 			<% end %>
-			<% i+=1 %>
-			<% if i==4 %>
-			<% i=1 %>
-			<% end %>
+			<% i==3? i=1 : i+=1 %>
 
 			<% end %>
 
