@@ -19,7 +19,7 @@
 					<div class="slider-wrapper theme-light"  style="max-width:800px; margin:0px auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
-							<% links = ["/fashion/steel-blue","/fashion/gaussian-motion","/fashion/positive-dimension","/fashion/new-kids-on-the-block","/fashion/sunkick","/fashion/and-the-wind-blows-your-hair"] %>
+							<% links = ["/fashion/steel-blue","/shopping/agyness-deyn-x-dr-martens-collaboration","/film/morphe-a-short-film-by-aesop-x-lucy-mcrae","/shopping/damir-doma-fraai-ankle-boots","/fashion/positive-dimension-by-hadriel-gonzalez","/fashion/new-kids-on-the-block-by-felix-wong", "/art/sound-sculpture-by-zimoun"] %>
 							<% @page.images.each_with_index do |image, index| %>					
 							<a href="<%=links[index]%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%= raw (@page.caption_for_image_index(index)? @page.caption_for_image_index(index) : "") %>"/></a>
 
