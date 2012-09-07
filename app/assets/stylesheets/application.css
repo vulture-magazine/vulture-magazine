@@ -245,4 +245,7 @@ h2{
     display: inline-block;
 }
 
+.nivo-caption p{
+    text-align: left;
+}
 
