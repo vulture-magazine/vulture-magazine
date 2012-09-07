@@ -19,7 +19,7 @@
 					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("640x300#c").url%>" data-title="Item Title" data-description="<%=raw boss.caption_for_image_index(index) %>" style="margin:0px auto; height:auto; width:100%;"></a>
 					<div class='nivo-caption' style="bottom:1.5%;">  
 						<h1><%=raw boss.title%></h1>
-						<%=raw boss.content_for(:body).split(' ')[0,20].inject{|sum,word| sum + ' ' + word} +"..."%>
+						<%=raw boss.content_for(:body).split(' ')[0,10].inject{|sum,word| sum + ' ' + word} +"..."%>
 						<a href="<%= url_for boss.url %>" style="color:white; position:absolute; bottom: 2%; right:5px;"><p>Read More</p></a>
 					</div> 
 				</div>

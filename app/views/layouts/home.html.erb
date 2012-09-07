@@ -19,8 +19,10 @@
 					<div class="slider-wrapper theme-light"  style="max-width:800px; margin:0px auto;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
+							<% links = ["/fashion/slenderman","/fashion/in-a-blur","/fashion/positive-dimension","/fashion/traversity","",""] %>
 							<% @page.images.each_with_index do |image, index| %>					
-							<a href="<%=image.thumbnail("800x450#c").url%>" style="position:relative;"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%= raw (@page.caption_for_image_index(index)? @page.caption_for_image_index(index) : "") %>"/></a>
+							<a href="<%=links[index]%>"><img src="<%=image.thumbnail("800x450#c").url%>" title="<%= raw (@page.caption_for_image_index(index)? @page.caption_for_image_index(index) : "") %>"/></a>
+
 							<% end %> 
 						</div>
 					</div>
@@ -56,7 +58,6 @@
     });
 	});
 </script>
-
 
 </body>
 </html>
