@@ -7,15 +7,23 @@
 	<%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
 	<div id="page_container">
 		<header id="header">
-			<%= render '/refinery/header' -%>
+			<%= render '/refinery/header' -%>					
 		</header>
 		<section id="page">
+			<div class="row" style="height:100%;">
+				<div class="two columns"></div>
+				<div class="eight columns" style="margin-left: 0%;">
+					<p style="font-size:12px; margin-bottom:8px;"><%=@page.title%></p>
+				</div>
+				<div class="two columns"></div>
+			</div>
 
 			<% @page.children.each do |boss| %>
 			<% boss.images.each_with_index	 do |image, index| %>	
 			<div class="row" style="padding-bottom:1%;">
 				<div class="two columns"></div>
 				<div class = "eight columns" style="width:74%; margin-left:0px;">
+
 					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("640x300#c").url%>" data-title="Item Title" data-description="<%=raw boss.caption_for_image_index(index) %>" style="margin:0px auto; height:auto; width:100%;"></a>
 					<div class='nivo-caption' style="bottom:1.5%;">  
 						<h1><%=raw boss.title%></h1>
