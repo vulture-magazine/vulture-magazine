@@ -1,5 +1,5 @@
 Refinery::Mailchimp.configure do |config|
   # Configure your Mailchimp API Key
-  # config.api_key = "421377e35e361af43bc83df8899e8793-us5"
+  # config.api_key = "f19490fdfca49b0e69651d5a93b2fab3-us5"
 end
 

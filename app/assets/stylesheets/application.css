@@ -227,6 +227,7 @@ h2{
     background: url("icons.png");
     background-position: 0 0;
     display: inline-block;
+
 }
 
 .tw{
@@ -235,6 +236,7 @@ h2{
     background: url("icons.png");
     background-position: -30px 0;
     display: inline-block;
+
 }
 
 .tb{
@@ -242,10 +244,31 @@ h2{
     height: 29px;
     background: url("icons.png");
     background-position: -60px 0;
-    display: inline-block;
 }
 
 .nivo-caption p{
     text-align: left;
 }
 
+.email, .button{
+    font-family: pala;
+    display: inline-block;
+    text-align: center;
+}
+
+
+#mc_embed_signup .button, .clear{
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+#mc_embed_signup{
+    background:#fff; 
+    clear:left; 
+    font:14px pala,sans-serif;
+}
+
+.validate{
+    padding: 0px;
+}

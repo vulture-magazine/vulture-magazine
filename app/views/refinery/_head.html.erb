@@ -13,6 +13,7 @@
   <%= csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend -%>
   <%= yield :meta %>
 
+  <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">  
   <%= stylesheet_link_tag "application", "formatting", "theme", "themes/light/light.css" %>
   <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=GFS+Didot" %>
   <%= stylesheet_link_tag "home" if home_page? %>
