@@ -203,7 +203,7 @@ h2{
 
 .videoWrapper {
     position: relative;
-    padding-bottom: 54.25%; /* 16:9 */
+    padding-bottom: 60.25%; /* 16:9 */
     padding-top: 25px;
     height: 0;
 }
@@ -272,4 +272,12 @@ h2{
 
 .validate{
     padding: 0px;
+}
+
+.syndicate-player-container{
+    width: 100%;
+}
+
+.bodyboss{
+    width: 100%;
 }
