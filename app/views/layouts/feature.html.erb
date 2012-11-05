@@ -10,30 +10,29 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<div class="row">
-				<div class="one" style="width:0%;"></div>	
-					<% i = 0 %>
+			<div class="container_24">
+				<div class="clear grid_2"></div>
+				<% i = 0 %>
 					<% @page.images.each_with_index do |image, index| %>					
-					<div class = "two columns" style="margin-left:1%; width:19%; padding:0px;">
-						<a href="/<%=raw @page.caption_for_image_index(index).downcase.gsub!(/(<[^>]*>)|\n|\t/s) {""}%>" style="position:relative;"><img src="<%=image.thumbnail("300x640#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
-						<div class='description' style="bottom:1.5%;">  
+					<div class = "grid_4" style="position:relative;">
+						<a href="/<%=raw @page.caption_for_image_index(index).downcase.gsub!(/(<[^>]*>)|\n|\t/s) {""}%>" style="position:relative;"><img src="<%=image.thumbnail("150x324#c").url%>" data-title="Item <%=i += 1%> Title" data-description="<%=raw @page.caption_for_image_index(index) %>"></a>
+						<div class='description'>  
 						        	<p><a href="/<%=raw @page.caption_for_image_index(index).gsub!(/(<[^>]*>)|\n|\t/s) {""}.downcase%>"><%=raw @page.caption_for_image_index(index)%></a></p>
 						</div>
 					</div>
 					<% end %> 
-				<div class="one" style="width:0%;"></div>
 			</div>
 		</section>
-		<footer>
-			<%= render '/refinery/footer' -%>
-		</footer>
 	</div>
 	<%= render '/refinery/javascripts' %>
 </body>
 
-<<script type="text/javascript">
+<script type="text/javascript">
 	$(document).delegate("div.description", "click", function() {
 	   window.location = $(this).find("a").attr("href");
+	});
+	$(document).ready(function(){
+		$("body").css("opacity", "1");
 	});
 </script>
 

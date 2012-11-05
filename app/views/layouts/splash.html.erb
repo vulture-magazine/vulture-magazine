@@ -6,21 +6,14 @@
 <body>
   <%= site_bar -%>
   <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-  <div class="row">
-
-      <div class="four columns"></div>
-      <div class="four   columns">
-          <%= link_to image_tag("vulture-logo.jpg", width:"100%"), "/home"%>
-      </div>
-      <div class="four columns"></div>
-
-    </div>
 
   <section id="page">
-    <div class="row">
+    <div class="container_24">
+      <div class="grid_8 push_8 suffix_8">
+          <%= link_to image_tag("vulture-logo.jpg", width:"100%"), "/home"%>
+      </div>
 
-      <div class="one columns"></div>
-      <div class="ten columns">
+      <div class="grid_20 push_2 suffix_2">
        <div class="videoWrapper">        
          <iframe src="http://player.vimeo.com/video/48893532?title=0&amp;byline=0&amp;portrait=0&amp;color=7a7a7a&amp;autoplay=1" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
@@ -28,7 +21,6 @@
       
 
       </div>
-      <div class="one columns"></div>
 
     </div>
     <br />

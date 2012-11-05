@@ -10,42 +10,24 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<% i = 1 %>	
-
-			<% @page.children.each do |boss| %>
-
-
-			<% boss.images.each_with_index	 do |image, index| %>
-			<% if i==1 %>
-			<div class="row" style="padding-bottom:1%;">
-			<div class = "one column end" style="width:5%; margin-left:4.4%"></div>
-			<% end %>
-				<div class = "three columns end" style="width=30%;">
-					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("400x400#c").url%>" data-title="Item Title" style="margin:0px auto; height:auto; width:100%;"></a>
-					<div class='nivo-caption' style="bottom:1.5%; left:0px; top:70%; width:100%; padding:0px;">  
+			<div class="container_24">
+				<% @page.children.each do |boss| %>
+				<% boss.images.each_with_index	 do |image, index| %>
+				<div class = "grid_8" style="position:relative;">
+					<a href="<%= url_for boss.url %>"><img src="<%=image.thumbnail("400x400#c").url%>" data-title="Item Title"></a>
+					<div class='nivo-caption' style="width: 310px; height: 40px; top: 270px; padding: 0; left: 0px; ">  
 						<h1 style="padding:2px 5px 2px 5px; font-size:14px;"><%=raw boss.title%></h1>
 					</div> 
 				</div>
-			<% if i==3 %>
-			<div class = "one column end" style="width:5%;"></div>
+				<% end %>
+				<% end %>
 			</div>
-			<%end%>
-			
-			<% break %>	
-			<% end %>
-			<% i==3? i=1 : i+=1 %>
-
-			<% end %>
-
-
-
-
-	</section>
-	<footer>
-		<%= render '/refinery/footer' -%>
-	</footer>
-</div>
-<%= render '/refinery/javascripts' %>
+		</section>
+		<footer>
+			<%= render '/refinery/footer' -%>
+		</footer>
+	</div>
+	<%= render '/refinery/javascripts' %>
 </body>
 </html>
 

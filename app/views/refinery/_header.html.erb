@@ -1,19 +1,9 @@
-  <div class = "row">
-  	<div class = "four columns" style="width:35%;"></div>
-  	<div class = "four columns" style="margin-left:0px;">
-  	  <%= link_to image_tag("vulture-logo.jpg"), "/home"%>
-  	</div>
-  	<div class = "four columns"></div>
-
-  </div>
-
-<div class="row">
-  <div class="two columns" style="width:5%;"></div>
-  <div class="eight columns" style="width:90%; margin-left:0px;">
+<div class="container_24">
+  <div class="grid_10 push_7 suffix_7"><%= link_to image_tag("vulture-logo.jpg"), "/home" %></div>
+  <div class="grid_18 push_3 suffix_3">
     <%= render(:partial => "/refinery/menu", :locals => {
              :dom_id => 'menu',
              :css => 'menu'
            }) %>
          </div>
-  <div class="two columns" style="width:5%;"></div>
 </div>

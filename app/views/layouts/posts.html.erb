@@ -10,18 +10,13 @@
 			<%= render '/refinery/header' -%>
 		</header>
 		<section id="page">
-			<div class="row" style="height:100%;">
-				<div class="two columns" style="width:5%;"></div>
-				<div class="eight columns" style="width:90%; margin-left: 0%;">
-					<a href="/<%=@page.parent.title.downcase%>"><p style="font-size:12px; margin-bottom:8px; max-width: 800px; margin-left: auto; margin-right: auto;"><%=@page.parent.title%></p></a>
+			<div class="container_24">
+				<div class="grid_18 push_3 suffix_3">
+					<a href="/<%=@page.parent.title.downcase%>"><p style="font-size:12px; margin-bottom:8px; margin-left: auto; margin-right: auto;"><%=@page.parent.title%></p></a>
 				</div>
-				<div class="two columns" style="width:5%;"></div>
-			</div>
-			<div class="row" style="height:100%;">
-				<div class="two columns" style="width:5%;"></div>
-				<div class="eight columns" style="width:90%; margin-left: 0%;">
+				<div class="grid_18 push_3 suffix_3">
 					<h1 class="small"><%= page_title %></h1>
-					<div class="slider-wrapper theme-light"  style="max-width:800px; margin-left:auto; margin-right:auto;">
+					<div class="slider-wrapper theme-light"  style="padding:0px;">
 						<div class="ribbon"></div>
 						<div id="slider" class="nivoSlider">
 							<% @page.images.each_with_index do |image, index| %>					
@@ -30,13 +25,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="two columns" style="width:5%;"></div>
-				<div class="row">
-					<div class="two columns" style="width:5%;"></div>
-					<div class="eight columns" style="width:90%;">
-						<div style="max-width:800px; margin:40px auto;"><%= raw @page.content_for(:body) %></div>	
-					</div>
-					<div class="two columns" style="width:5%;"></div>
+				<div class="grid_18 push_3 suffix_3">
+					<%= raw @page.content_for(:body) %>	
 				</div>
 			</div>
 		</section>
@@ -47,7 +37,7 @@
 	<%= render '/refinery/javascripts' %>
 	<script type="text/javascript">
 	$(window).load(function() {
-	    $('#slider').nivoSlider({
+		$('#slider').nivoSlider({
 	        effect:'fade', // Specify sets like: 'fold,fade,sliceDown'
 	        animSpeed:500, // Slide transition speed
 	        pauseTime:5000, // How long each slide will show
@@ -65,9 +55,9 @@
 	        captionOpacity:0.8, // Universal caption opacity
 	        prevText: 'Prev', // Prev directionNav text
 	        nextText: 'Next' // Next directionNav text
-	     });
-	});
-	</script>
+	    });
+});
+</script>
 </body>
 </html>
 

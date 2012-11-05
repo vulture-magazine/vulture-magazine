@@ -9,11 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require foundation
+ *= require 960
  *= require_self
  *= require_tree ./themes
  *= require_tree ./front
  */
-
 
 @font-face {
     font-family: pala;
@@ -34,7 +34,7 @@ h1.small{
 }
 
 
-h2{
+h2, h3{
     color: #2a2a2a;
     font-family: 'pala', serif;
 }
@@ -45,6 +45,7 @@ h2{
      left:0px;  
      width: 100%;
      top: 0px;
+     height: 100%;
      /* styling bellow */  
      background-color:black;  
      font-family: 'pala', serif;  
@@ -280,4 +281,9 @@ h2{
 
 .bodyboss{
     width: 100%;
+}
+
+#catcaption{
+    width: 200px;
+    right: 160px;
 }
